@@ -1,0 +1,5 @@
+campaign_code,name,season,start_date,end_date,campaign_type,trigger
+C-2026-PRE,Pre-monsoon 2026,Pre-monsoon,2026-04-20,2026-05-05,seasonal,
+C-2026-MON,Monsoon 2026,Monsoon,2026-08-04,2026-08-18,seasonal,
+C-2026-EVT1,Event: DO crash at Ardali Bazar,Post-monsoon,2026-10-09,2026-10-09,event,DO < 1 mg/L for 2 h at VR-05
+C-2026-POST,Post-monsoon 2026,Post-monsoon,2026-11-03,2026-11-17,seasonal,

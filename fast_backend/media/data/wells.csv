@@ -1,0 +1,5 @@
+well_code,name,lat,lon,paired_station,depth_m,zone
+GW-01,Basuhi floodplain well,25.436,82.558,VR-02,32,Gaining reach (pre-monsoon)
+GW-02,Morwa floodplain well,25.375,82.805,VR-03,28,Disconnected reach
+GW-03,Ardali Bazar well,25.344,82.972,VR-05,24,Contaminated (low resistivity)
+GW-04,Sarai Mohana well,25.33,83.04,VR-08,30,Losing reach (monsoon)

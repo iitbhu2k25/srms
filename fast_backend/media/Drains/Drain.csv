@@ -1,0 +1,377 @@
+River_name,River_Code,Name,latitude,longitude,Tapping_st,Drain_No,Discharge
+varuna,1,Unknown,25.321,82.956,Untapped,1,60.0
+varuna,1,Unknown,25.322,82.955,Untapped,2,48.3
+varuna,1,Mashini veer baba Drain-A,25.323,82.958,Untapped,3,-999.0
+varuna,1,Bedauli Drain,25.323,82.951,Untapped,4,-999.0
+varuna,1,Mashini veer baba Drain-B,25.324,82.958,Untapped,5,-999.0
+varuna,1,Confluence point,25.329,83.044,Untapped,6,-999.0
+varuna,1,Defence Colony Drain-A,25.33,82.958,Untapped,7,-999.0
+varuna,1,Unknown,25.33,82.946,Untapped,8,40.0
+varuna,1,Defence Colony Drain-B,25.33,82.958,Untapped,9,-999.0
+varuna,1,Unknown,25.331,82.94,Untapped,10,7.62
+varuna,1,Jagat veer Dih baba mandir drain,25.334,82.994,Untapped,11,-999.0
+varuna,1,Unknown,25.335,82.997,Untapped,12,40.0
+varuna,1,Mohan Katra Drain,25.335,83.036,Untapped,13,-999.0
+varuna,1,Raja Bazar Drain,25.336,82.992,Untapped,14,-999.0
+varuna,1,Unknown,25.336,82.999,Untapped,15,1.02
+varuna,1,Bhawanipur Drain/Kohilabir Baba,25.336,82.957,Untapped,16,-999.0
+varuna,1,Drain-27,25.336,83.0,Untapped,17,-999.0
+varuna,1,Unknown,25.337,83.0,Untapped,18,40.0
+varuna,1,Sadar Bazar Drain,25.338,82.976,Untapped,19,-999.0
+varuna,1,Chamrotha Drain,25.339,82.961,Untapped,20,-999.0
+varuna,1,Kashiram Awas Drain-1,25.339,82.961,Untapped,21,-999.0
+varuna,1,Banaras Drain no-5,25.339,82.978,Untapped,22,-999.0
+varuna,1,Khatikan Mohalla Drain,25.339,82.978,Untapped,23,-999.0
+varuna,1,Unknown,25.339,82.963,Untapped,24,7.4
+varuna,1,Drain-29 B,25.339,83.0,Untapped,25,-999.0
+varuna,1,Phulwariya Drain,25.34,82.963,Untapped,26,-999.0
+varuna,1,Phulwariya Drain-11,25.34,82.963,Untapped,27,-999.0
+varuna,1,Phulawaria SPS,25.34,82.963,Untapped,28,-999.0
+varuna,1,Drain-29 A,25.34,83.0,Untapped,29,-999.0
+varuna,1,Unknown,25.34,82.963,Untapped,30,40.0
+varuna,1,Unknown,25.34,83.019,Untapped,31,60.0
+varuna,1,PWD office Drain-1,25.34,82.984,Untapped,32,-999.0
+varuna,1,Khajuriya Hanuman Mandir Drain,25.34,83.03,Untapped,33,-999.0
+varuna,1,Tinpuliya Drain,25.341,83.018,Untapped,34,-999.0
+varuna,1,PWD office Drain-2,25.341,82.985,Untapped,35,-999.0
+varuna,1,Jalalipura drain,25.341,83.027,Untapped,36,-999.0
+varuna,1,Shailputri Drain,25.341,83.02,Untapped,37,-999.0
+varuna,1,Kashiram drain-2,25.341,82.963,Untapped,38,-999.0
+varuna,1,Unknown,25.341,82.982,Untapped,39,40.0
+varuna,1,Konia Ramlila Mandir drain,25.341,83.031,Untapped,40,-999.0
+varuna,1,Unknown,25.341,83.029,Untapped,41,60.0
+varuna,1,Unknown,25.341,82.934,Untapped,42,60.0
+varuna,1,Unknown,25.341,83.025,Untapped,43,4.1
+varuna,1,Khajuri Colony Drain,25.341,82.989,Untapped,44,-999.0
+varuna,1,Khajuri drain,25.341,82.989,Untapped,45,-999.0
+varuna,1,Hidayat Nagar drain,25.341,83.011,Untapped,46,-999.0
+varuna,1,Proposed IPS _1,25.341,82.972,Untapped,47,-999.0
+varuna,1,Unknown,25.341,83.009,Untapped,48,60.0
+varuna,1,SWD outfall,25.341,83.025,Untapped,49,-999.0
+varuna,1,Nakhi Drain,25.341,83.009,Untapped,50,-999.0
+varuna,1,Ordaly Bazar Drain,25.342,82.985,Untapped,51,-999.0
+varuna,1,Ardali bazar drain,25.342,82.985,Untapped,52,-999.0
+varuna,1,Bheemnagar Drain-2,25.342,82.972,Untapped,53,-999.0
+varuna,1,Nai Basti Drain,25.342,83.009,Untapped,54,-999.0
+varuna,1,R/b Near old bridge Drain,25.342,83.024,Untapped,55,-999.0
+varuna,1,Proposed IPS_2,25.342,83.023,Untapped,56,-999.0
+varuna,1,Nai Basti Drain,25.342,83.009,Untapped,57,-999.0
+varuna,1,Unknown,25.342,82.967,Untapped,58,60.0
+varuna,1,Vijaypura Konia Drain,25.342,83.033,Untapped,59,-999.0
+varuna,1,Bheem Nagar Drain-1,25.342,82.971,Untapped,60,-999.0
+varuna,1,Unknown,25.343,83.001,Untapped,61,60.0
+varuna,1,Eidgah Drain,25.344,82.932,Untapped,62,-999.0
+varuna,1,Proposed IPS_3,25.344,83.037,Untapped,63,-999.0
+varuna,1,Salarpur Dipo colony Drain,25.344,83.034,Untapped,64,-999.0
+varuna,1,Salarpur Mangraha baba drain,25.345,83.036,Untapped,65,-999.0
+morwa,2,Unknown,25.349,82.573,Untapped,66,-999.0
+varuna,1,Unknown,25.35,82.925,Untapped,67,0.38
+varuna,1,Unknown,25.35,82.93,Untapped,68,7.65
+varuna,1,Varuna Back water,25.35,82.935,Untapped,69,-999.0
+varuna,1,Varuna Back water,25.35,82.925,Untapped,70,-999.0
+morwa,2,Unknown,25.351,82.596,Untapped,71,0.0
+morwa,2,Unknown,25.352,82.596,Untapped,72,-999.0
+varuna,1,Unknown,25.353,82.922,Untapped,73,7.52
+morwa,2,Unknown,25.353,82.533,Untapped,74,-999.0
+morwa,2,Unknown,25.353,82.342,Untapped,75,-999.0
+morwa,2,Unknown,25.356,82.352,Untapped,76,-999.0
+morwa,2,Unknown,25.356,82.432,Untapped,77,-999.0
+morwa,2,Unknown,25.359,82.605,Untapped,78,-999.0
+varuna,1,Unknown,25.361,82.913,Untapped,79,40.0
+morwa,2,Unknown,25.361,82.474,Untapped,80,-999.0
+varuna,1,Koirajpur SWD,25.362,82.913,Untapped,81,-999.0
+varuna,1,Unknown,25.362,82.913,Untapped,82,2.26
+morwa,2,Unknown,25.362,82.426,Untapped,83,-999.0
+morwa,2,Unknown,25.363,82.251,Untapped,84,-999.0
+morwa,2,Unknown,25.364,82.256,Untapped,85,-999.0
+morwa,2,Unknown,25.364,82.554,Untapped,86,-999.0
+morwa,2,Unknown,25.364,82.476,Untapped,87,-999.0
+morwa,2,Unknown,25.365,82.319,Untapped,88,-999.0
+morwa,2,Unknown,25.366,82.467,Untapped,89,-999.0
+morwa,2,Unknown,25.366,82.605,Untapped,90,-999.0
+morwa,2,Unknown,25.367,82.5,Untapped,91,-999.0
+morwa,2,Unknown,25.368,82.463,Untapped,92,-999.0
+morwa,2,Unknown,25.368,82.353,Untapped,93,-999.0
+morwa,2,Unknown,25.368,82.386,Untapped,94,-999.0
+morwa,2,Unknown,25.368,82.273,Untapped,95,-999.0
+varuna,1,Unknown,25.368,82.895,Untapped,96,40.0
+morwa,2,Unknown,25.369,82.272,Untapped,97,-999.0
+varuna,1,Unknown,25.369,82.893,Untapped,98,6.18
+morwa,2,Unknown,25.369,82.4,Untapped,99,-999.0
+morwa,2,Unknown,25.369,82.606,Untapped,100,-999.0
+morwa,2,Unknown,25.369,82.353,Untapped,101,-999.0
+morwa,2,Unknown,25.37,82.606,Untapped,102,3.3
+morwa,2,Unknown,25.371,82.523,Untapped,103,-999.0
+morwa,2,Unknown,25.373,82.365,Untapped,104,-999.0
+varuna,1,Unknown,25.373,82.871,Untapped,105,7.96
+morwa,2,Unknown,25.375,82.36,Untapped,106,-999.0
+varuna,1,Unknown,25.378,82.761,Untapped,107,40.0
+varuna,1,Unknown,25.38,82.783,Untapped,108,7.43
+morwa,2,Unknown,25.381,82.615,Untapped,109,1.09
+varuna,1,Unknown,25.384,82.832,Untapped,110,40.0
+varuna,1,Unknown,25.384,82.741,Untapped,111,40.0
+varuna,1,Unknown,25.386,82.845,Untapped,112,7.86
+varuna,1,Unknown,25.386,82.737,Untapped,113,0.13
+varuna,1,Unknown,25.387,82.851,Untapped,114,2.27
+varuna,1,Unknown,25.387,82.735,Untapped,115,7.3
+varuna,1,Unknown,25.388,82.854,Untapped,116,7.37
+morwa,2,Unknown,25.388,82.297,Untapped,117,-999.0
+varuna,1,Unknown,25.389,82.708,Untapped,118,6.21
+varuna,1,Unknown,25.389,82.799,Untapped,119,0.18
+varuna,1,Unknown,25.39,82.799,Untapped,120,6.76
+varuna,1,Unknown,25.39,82.864,Untapped,121,6.98
+varuna,1,Unknown,25.391,82.728,Untapped,122,40.0
+varuna,1,Unknown,25.393,82.863,Untapped,123,6.92
+varuna,1,Varuna Back water,25.393,82.861,Untapped,124,-999.0
+varuna,1,Unkown,25.394,82.693,Untapped,125,40.0
+varuna,1,Unkown,25.395,82.638,Untapped,126,7.34
+varuna,1,Unkown,25.399,82.655,Untapped,127,6.11
+varuna,1,Unkown,25.403,82.621,Untapped,128,7.63
+varuna,1,Unkown,25.405,82.817,Untapped,129,7.39
+varuna,1,Unkown,25.408,82.809,Untapped,130,40.0
+varuna,1,Unkown,25.412,82.629,Untapped,131,7.62
+basuhi,3,Unkown,25.414,82.684,Untapped,132,-999.0
+varuna,1,Unkown,25.415,82.577,Untapped,133,60.0
+varuna,1,Unkown,25.417,82.569,Untapped,134,9.65
+varuna,1,Unkown,25.417,82.598,Untapped,135,40.0
+varuna,1,Unkown,25.417,82.569,Untapped,136,60.0
+varuna,1,Unkown,25.443,82.525,Untapped,137,6.33
+basuhi,3,Unkown,25.447,82.703,Untapped,138,-999.0
+varuna,1,Unkown,25.449,82.61,Untapped,139,7.79
+varuna,1,Unkown,25.459,82.555,Untapped,140,0.11
+varuna,1,Unkown,25.459,82.556,Untapped,141,6.02
+basuhi,3,Unkown,25.469,82.679,Untapped,142,-999.0
+basuhi,3,Unkown,25.476,82.666,Untapped,143,-999.0
+basuhi,3,Unkown,25.481,82.655,Untapped,144,-999.0
+basuhi,3,Unkown,25.486,82.657,Untapped,145,-999.0
+varuna,1,Unkown,25.489,82.469,Untapped,146,6.41
+basuhi,3,Unkown,25.492,82.631,Untapped,147,-999.0
+basuhi,3,Unkown,25.493,82.628,Untapped,148,-999.0
+varuna,1,Unkown,25.494,82.306,Untapped,149,7.14
+varuna,1,Unkown,25.495,82.274,Untapped,150,60.0
+basuhi,3,Unkown,25.496,82.625,Untapped,151,-999.0
+basuhi,3,Unkown,25.496,82.616,Untapped,152,-999.0
+basuhi,3,Unkown,25.499,82.616,Untapped,153,-999.0
+basuhi,3,Unkown,25.499,82.609,Untapped,154,-999.0
+basuhi,3,Unkown,25.503,82.604,Untapped,155,0.14
+basuhi,3,Unkown,25.505,82.604,Untapped,156,-999.0
+varuna,1,Unkown,25.511,82.338,Untapped,157,6.79
+varuna,1,Unkown,25.513,82.393,Untapped,158,7.99
+varuna,1,Unkown,25.514,82.424,Untapped,159,7.63
+varuna,1,Unkown,25.517,82.438,Untapped,160,40.0
+varuna,1,Unkown,25.52,82.396,Untapped,161,7.08
+varuna,1,Unkown,25.524,82.22,Untapped,162,7.69
+basuhi,3,Unkown,25.54,82.588,Untapped,163,-999.0
+basuhi,3,Unkown,25.544,82.586,Untapped,164,0.34
+varuna,1,Unkown,25.546,82.211,Untapped,165,7.48
+varuna,1,Unkown,25.561,82.206,Untapped,166,7.71
+basuhi,3,Unkown,25.561,82.589,Untapped,167,-999.0
+basuhi,3,Unkown,25.562,82.578,Untapped,168,-999.0
+basuhi,3,Unkown,25.563,82.58,Untapped,169,-999.0
+basuhi,3,Unkown,25.563,82.584,Untapped,170,-999.0
+varuna,1,Unkown,25.572,82.214,Untapped,171,40.0
+varuna,1,Unkown,25.577,82.214,Untapped,172,6.58
+varuna,1,Unkown,25.578,82.212,Untapped,173,6.14
+varuna,1,Unkown,25.581,82.179,Untapped,174,6.07
+varuna,1,Unkown,25.583,82.127,Untapped,175,7.67
+basuhi,3,Unkown,25.586,82.546,Untapped,176,-999.0
+varuna,1,Unkown,25.592,82.121,Untapped,177,40.0
+basuhi,3,Unkown,25.595,82.499,Untapped,178,-999.0
+basuhi,3,Unkown,25.597,82.498,Untapped,179,-999.0
+varuna,1,Unkown,25.598,82.103,Untapped,180,7.95
+varuna,1,Unkown,25.598,82.091,Untapped,181,7.22
+varuna,1,Unkown,25.6,82.108,Untapped,182,6.59
+varuna,1,Unkown,25.602,82.113,Untapped,183,7.26
+varuna,1,Unkown,25.603,82.06,Untapped,184,7.28
+basuhi,3,Unkown,25.604,82.483,Untapped,185,-999.0
+basuhi,3,Unkown,25.619,82.407,Untapped,186,-999.0
+varuna,1,Unkown,25.62,82.047,Untapped,187,7.49
+basuhi,3,Unkown,25.621,82.343,Untapped,188,-999.0
+basuhi,3,Unkown,25.621,82.342,Untapped,189,-999.0
+basuhi,3,Unkown,25.622,82.414,Untapped,190,-999.0
+basuhi,3,Unkown,25.623,82.339,Untapped,191,-999.0
+basuhi,3,Unkown,25.623,82.44,Untapped,192,-999.0
+basuhi,3,Unkown,25.626,82.433,Untapped,193,-999.0
+basuhi,3,Unkown,25.626,82.388,Untapped,194,-999.0
+varuna,1,Unkown,25.631,82.04,Untapped,195,7.14
+basuhi,3,Unkown,25.631,82.417,Untapped,196,-999.0
+basuhi,3,Unkown,25.633,82.305,Untapped,197,-999.0
+basuhi,3,Unkown,25.634,82.418,Untapped,198,-999.0
+basuhi,3,Unkown,25.637,82.43,Untapped,199,-999.0
+varuna,1,Unkown,25.638,82.042,Untapped,200,7.81
+basuhi,3,Unkown,25.646,82.267,Untapped,201,-999.0
+basuhi,3,Unkown,25.647,82.261,Untapped,202,-999.0
+basuhi,3,Unkown,25.66,82.254,Untapped,203,-999.0
+basuhi,3,Unkown,25.669,82.247,Untapped,204,-999.0
+basuhi,3,Unkown,25.677,82.248,Untapped,205,-999.0
+basuhi,3,Unkown,25.692,82.242,Untapped,206,-999.0
+basuhi,3,Unkown,25.697,82.233,Untapped,207,-999.0
+basuhi,3,Unkown,25.701,82.233,Untapped,208,-999.0
+basuhi,3,Unkown,25.708,82.231,Untapped,209,-999.0
+basuhi,3,Unkown,25.709,82.231,Untapped,210,-999.0
+basuhi,3,Unkown,25.715,82.232,Untapped,211,-999.0
+basuhi,3,Unkown,25.727,82.236,Untapped,212,-999.0
+basuhi,3,Unkown,25.748,82.228,Untapped,213,-999.0
+basuhi,3,Unkown,25.758,82.219,Untapped,214,-999.0
+basuhi,3,Unkown,25.759,82.197,Untapped,215,-999.0
+basuhi,3,Unkown,25.771,82.208,Untapped,216,-999.0
+varuna,1,Bhawanipur/Kohilwaveer Baba Drain,25.311,83.011,Untapped,217,0.9
+varuna,1,Bheemnagar Drain-1,25.345,82.965,Untapped,218,0.75
+varuna,1,Bheemnagar Drain-2,25.345,82.965,Untapped,219,0.55
+varuna,1,Central Jail Drain,25.341,82.993,Tapped,220,14.5
+varuna,1,Defence Colony Drain-A,25.279,82.993,Untapped,221,0.6
+varuna,1,Defence colony Drain-B,25.279,82.993,Untapped,222,1.2
+varuna,1,Drain 29 A,25.318,82.974,Untapped,223,0.72
+varuna,1,Drain-25,25.318,82.974,Tapped,224,1.0
+varuna,1,Drain-27,25.318,82.974,Untapped,225,1.0
+varuna,1,Drain-29 B,25.318,82.974,Untapped,226,0.82
+varuna,1,Durga Drain,25.282,83.04,Untapped,227,37.0
+varuna,1,Hidayat Nagar Drain,25.34,83.01,Tapped,228,1.5
+varuna,1,Hukulganj Drain,25.346,82.999,Tapped,229,1.15
+varuna,1,Jagatveer Dih Baba Mandir Drain,25.334,82.994,Tapped,230,2.0
+varuna,1,Jalalipura Drain,25.334,83.024,Untapped,231,4.5
+varuna,1,Kashiram Awas Drain-1/Chamrautha Drain,25.318,82.974,Untapped,232,3.0
+varuna,1,Kashiram Awas Drain-2,25.318,82.974,Untapped,233,0.5
+varuna,1,Khajuriya Hanuman Mandir Drain,25.289,82.987,Untapped,234,0.8
+varuna,1,Khajury Drain,25.347,82.991,Tapped,235,2.2
+varuna,1,Khatikan Mohalla/Banaras Drain No.-5,25.269,82.99,Tapped,236,0.5
+varuna,1,Konia By Pass Drain,25.337,83.032,Untapped,237,40.0
+varuna,1,Konia Ramlila Mandir Drain,25.26,83.049,Untapped,238,0.8
+varuna,1,Mashini Veer Baba Drain-B,25.322,82.958,Untapped,239,1.3
+varuna,1,Mashini Veer Baba Drain-A,25.322,82.958,Untapped,240,2.5
+varuna,1,Mohan Katra Drain,25.318,82.974,Untapped,241,6.82
+varuna,1,Nai Basti,25.345,83.006,Tapped,242,2.0
+varuna,1,Nakkhighat Drain,25.338,83.009,Tapped,243,3.0
+varuna,1,Ordely Bazar Drain,25.348,82.98,Tapped,244,7.0
+varuna,1,Phulwariya Drain,25.324,82.965,Tapped,245,8.2
+varuna,1,PWD Office Drain-1,25.339,82.986,Untapped,246,0.3
+varuna,1,PWD Office Drain-2,25.339,82.986,Untapped,247,0.5
+varuna,1,R/B Near Old Varuna Bridge,25.299,83.002,Untapped,248,0.4
+varuna,1,Raja Bazar Drain,25.339,82.989,Tapped,249,2.5
+varuna,1,Sadar Bazar Drain,25.33,82.977,Tapped,250,3.5
+varuna,1,Salarpur Dipo Colony Drain,25.347,83.034,Untapped,251,2.5
+varuna,1,Salarpur Mangaraha Baba Drain,25.344,83.037,Untapped,252,1.32
+varuna,1,Sarang Talab Drain/Bhagwa Drain,25.351,83.007,Tapped,253,3.9
+varuna,1,Shaiputri Drain,25.34,83.019,Tapped,254,5.5
+varuna,1,Shastrighat Drain,25.272,83.023,Tapped,255,5.0
+varuna,1,TeliyaBag Drain,25.328,82.995,Tapped,256,40.3
+varuna,1,Tinpuliya Drain,25.306,83.01,Tapped,257,2.58
+assi,4,assi drain,25.289,83.006,Partial,258,78.0
+sai,5,Bholiya Drain,25.897,81.945,Tapped,259,0.5
+sai,5,Police Line Drain,25.921,81.991,Tapped,260,1.1
+sai,5,Ramlila Maidan Drain,25.897,81.945,Tapped,261,1.5
+sai,5,Sadar Drain,25.907,81.976,Tapped,262,4.0
+ganga,6,Badri Vishal Nala (Manihari Nala) (Manikpur Nagar Panchayat),25.921,81.988,Untapped,263,0.03
+ganga,6,Mallahan Tola Drain (Manikpur Nagar Panchayat),25.766,81.412,Untapped,264,0.09
+ganga,6,Raja Hela Nala (Prathmik Nala) (Manikpur Nagar Panchayat),25.894,81.943,Untapped,265,0.61
+ganga,6,Rajghat Nala (Post Office Nala) (Manikpur Nagar Panchayat),25.684,81.445,Untapped,266,0.26
+ganga,6,Saraswati Ghat Nala (Pakka Nala) (Manikpur Nagar Panchayat),25.767,81.4,Untapped,267,0.6
+ganga,6,5 small drains near Gangoli Shival Drain,25.441,81.896,Tapped,268,1.02
+ganga,6,A.D.A. Colony Nala / Jwaladevi,25.455,81.832,Untapped,269,4.28
+ganga,6,Allenganj Nala / Buxi Bund Nala,25.465,81.865,Tapped,270,20.56
+ganga,6,Baretha/Kashipur,25.458,81.742,Tapped,271,1.05
+ganga,6,Basna Nala,25.524,81.863,Tapped,272,4.62
+ganga,6,Chilla Drain,25.495,81.876,Tapped,273,1.23
+ganga,6,Co-Operative Drain,25.45,81.842,Untapped,274,0.0
+ganga,6,Dham Drain,25.446,81.886,Tapped,275,0.44
+ganga,6,Drains of Daraganj Area,25.443,81.88,Tapped,276,2.11
+ganga,6,Gokula Drain,25.468,81.855,Untapped,277,1.22
+ganga,6,Govindpur Colony Drain (Purani Basti),25.491,81.876,Untapped,278,0.22
+ganga,6,Govindpur Colony Drain No. 1,25.494,81.874,Untapped,279,0.28
+ganga,6,Govindpur Colony Drain No. 2,25.491,81.876,Untapped,280,0.32
+ganga,6,Govindpur Colony Drain No. 3,25.491,81.876,Untapped,281,0.16
+ganga,6,Govindpur Colony Drain No. 4,25.491,81.876,Untapped,282,0.27
+ganga,6,Indira Awas Nala / Jai Gurudev Ashram Nala,25.521,81.866,Tapped,283,1.19
+ganga,6,Jondhwal Ghat Drain/Chhuhara Mandir,25.409,81.907,Tapped,284,1.38
+ganga,6,Jondhwal Nala,25.425,81.85,Untapped,285,6.75
+ganga,6,Jondhwal Rasulabad Drain (Murdaghat),25.502,81.855,Tapped,286,1.58
+ganga,6,Kodra Nala,25.47,81.857,Tapped,287,13.36
+ganga,6,Lakkar Nala,25.468,81.864,Tapped,288,0.63
+ganga,6,Lotey Haren Nala,25.468,81.864,Tapped,289,6.53
+ganga,6,Mehdauri Gaon Drain,25.495,81.852,Tapped,290,1.48
+ganga,6,Morigate Nala,25.425,81.85,Tapped,291,8.46
+ganga,6,Mumfordganj Drain,25.427,81.887,Tapped,292,10.56
+ganga,6,Nehru Park Nala,25.461,81.793,Tapped,293,2.72
+ganga,6,Ponghat Nala,25.449,81.752,Tapped,294,7.71
+ganga,6,Rajapur Nala,25.472,81.834,Untapped,295,27.17
+ganga,6,Rasulabad Puccaghat Drain,25.502,81.855,Tapped,296,1.63
+ganga,6,Sadar Bazar Nala,25.469,81.819,Untapped,297,4.79
+ganga,6,Salori Nala,25.484,81.876,Partial,298,20.08
+ganga,6,Shankarghat Colony Drain (Near Phaphamau Bridge),25.525,81.861,Untapped,299,0.95
+ganga,6,Shankarghat Drain -01,25.504,81.862,Untapped,300,0.44
+ganga,6,Shankarghat Drain -02,25.504,81.862,Untapped,301,0.95
+ganga,6,Shantipuram Nala,25.529,81.854,Tapped,302,4.69
+ganga,6,"Shastri Bridge Nala (03 small drains), Jhushi",25.427,81.861,Tapped,303,0.64
+ganga,6,Shivkuti Drain No. 1,25.498,81.873,Untapped,304,1.19
+ganga,6,Shivkuti Drain No. 2,25.5,81.875,Untapped,305,0.16
+ganga,6,Shivkuti Drain No. 3 (North),25.468,81.855,Untapped,306,0.22
+ganga,6,Shivkuti Drain No. 4,25.468,81.855,Untapped,307,0.28
+ganga,6,Shivkuti Drain No. 5,25.446,81.826,Untapped,308,0.32
+ganga,6,Shivkuti Drain No. 6,25.498,81.873,Untapped,309,0.28
+ganga,6,Shivkuti Drain No. 7 (East),25.468,81.855,Untapped,310,0.77
+ganga,6,Triveni Marg Drain I,25.428,81.886,Tapped,311,1.15
+ganga,6,Triveni Marg Drain II,25.426,81.887,Tapped,312,0.62
+ganga,6,Ulta Quila I,25.426,81.9,Tapped,313,0.33
+ganga,6,Ulta Quila II,25.426,81.9,Tapped,314,0.26
+ganga,6,Yadavpur Drain,25.427,81.887,Tapped,315,0.65
+yamuna,7,Arail Drain No. 2 (Kharkauni Drain),25.402,81.87,Tapped,316,3.31
+yamuna,7,Balua Ghat JCC Backside,25.423,81.839,Tapped,317,0.15
+yamuna,7,Baswar,25.37,81.817,Untapped,318,0.17
+yamuna,7,Chachar Nala,25.422,81.837,Tapped,319,25.7
+yamuna,7,Dariyabad Jogighat Drain Meerapur,25.423,81.832,Tapped,320,0.51
+yamuna,7,Dariyabad Kakahraghat Drain Meerapur,25.426,81.833,Untapped,321,2.11
+yamuna,7,Dariyabad Pipalghat Drain,25.426,81.833,Untapped,322,0.12
+yamuna,7,Drain at Gate No. 13,25.436,81.826,Tapped,323,2.03
+yamuna,7,Drain at Gate No. 9,25.436,81.826,Tapped,324,2.21
+yamuna,7,Drain near Chachar Nala/Bargad Ghat Meerapur,25.42,81.828,Tapped,325,0.19
+yamuna,7,Fort Drain No. 1,25.43,81.877,Untapped,326,0.0
+yamuna,7,Fort Drain No. 2,25.43,81.877,Untapped,327,0.0
+yamuna,7,Ghaghar Nala 1-A / Sadiyapur Drain,25.409,81.907,Tapped,328,0.26
+yamuna,7,Ghaghar Nala 1-A1,25.445,81.825,Tapped,329,0.21
+yamuna,7,Ghaghar Nala 1-B / Harshvardhan Drain,25.486,81.874,Tapped,330,0.1
+yamuna,7,Karela Bagh Drain,25.42,81.816,Tapped,331,0.61
+yamuna,7,Karela Bagh Drain A-1,25.42,81.816,Tapped,332,0.75
+yamuna,7,Karela Bagh Drain A-2,25.42,81.816,Tapped,333,0.74
+yamuna,7,Madauka Drain,25.446,81.886,Tapped,334,3.62
+yamuna,7,Mahewa Ghat Drain No. 1,25.417,81.837,Tapped,335,0.75
+yamuna,7,Mahewa Ghat Drain No. 2,25.417,81.837,Tapped,336,0.42
+yamuna,7,Mahewa Ghat Drain No. 3,25.417,81.837,Tapped,337,0.61
+yamuna,7,Mahewa Pasi Tola Drain No. 1,25.417,81.837,Tapped,338,0.72
+yamuna,7,Mahewa Pasi Tola Drain No. 2,25.417,81.837,Tapped,339,0.41
+yamuna,7,Mahewa Pasi Tola Drain No. 3,25.417,81.837,Tapped,340,0.62
+yamuna,7,Mahewa Pasi Tola Drain No. 4,25.417,81.837,Tapped,341,0.31
+yamuna,7,Mahewa Pasi Tola Drain No. 5,25.446,81.826,Tapped,342,0.41
+yamuna,7,Main Ghaghar Nala,25.427,81.887,Tapped,343,26.58
+yamuna,7,Mawaiya Nala,25.387,81.893,Tapped,344,29.97
+yamuna,7,Near Arail Ghat,25.421,81.881,Tapped,345,0.21
+yamuna,7,Sachcha Baba Ashram Drain,25.419,81.882,Tapped,346,1.49
+yamuna,7,Sasur Khaderi,25.42,81.814,Tapped,347,18.5
+ganga,6,Shivala Drain,25.296,83.007,Tapped,348,5.0
+ganga,6,Harishchandraghat Drain,25.298,83.007,Tapped,349,2.5
+ganga,6,Mansaroverghat Drain,25.301,83.008,Tapped,350,4.5
+ganga,6,Pandeyghat Drain,25.303,83.008,Tapped,351,5.2
+ganga,6,Dr. R. P. Ghat Drain,25.307,83.011,Tapped,352,20.0
+ganga,6,Meerghat Drain,25.309,83.012,Tapped,353,4.8
+ganga,6,Lalitaghat Drain,25.31,83.013,Tapped,354,1.5
+ganga,6,Jaleshanghat Drain,25.31,83.014,Tapped,355,2.0
+ganga,6,Manikarnikaghat Drain,25.311,83.014,Tapped,356,1.0
+ganga,6,Sankthaghat Drain,25.27,83.006,Tapped,357,0.25
+ganga,6,Mehtaghat Drain,25.314,83.017,Tapped,358,0.1
+ganga,6,Ramghat Drain,25.311,83.014,Tapped,359,0.25
+ganga,6,Panchgangaghat Drain,25.315,83.018,Tapped,360,0.25
+ganga,6,Bramhaghat Drain,25.316,83.019,Tapped,361,0.5
+ganga,6,Lalghat Drain,25.31,83.013,Tapped,362,0.15
+ganga,6,Trilochanghat Drain,25.307,83.01,Tapped,363,4.5
+ganga,6,Teliya Drain,25.281,82.977,Tapped,364,2.8
+ganga,6,Bhainsasur Drain,25.308,82.979,Tapped,365,0.4
+ganga,6,Rajghat Drain,25.324,83.033,Tapped,366,0.2
+ganga,6,Nakkha Drain,25.318,82.974,Tapped,367,5.0
+ganga,6,Samneghat Drain,25.295,82.99,Tapped,368,1.17
+ganga,6,Rajghat Outfall (Shahi Nala),25.324,83.033,Tapped,369,0.0
+ganga,6,Rambhag Ghat Drain,25.305,83.01,Tapped,370,8.2
+ganga,6,Balua Ghat Drain,25.421,83.183,Tapped,371,0.13
+ganga,6,Shakti Ghat Drain,25.289,83.006,Tapped,372,0.4
+ganga,6,Salotri Ghat Drain,25.317,83.02,Tapped,373,0.34
+ganga,6,Hanuman Ghat Drain,25.297,83.007,Tapped,374,0.09
+ganga,6,Sujabad Drain( Ghatwari Mata Mandir Drain),25.306,83.01,Untapped,375,2.5
+ganga,6,Sujabad Drain(Shayar Mata Mandir Drain),25.271,83.034,Untapped,376,2.0

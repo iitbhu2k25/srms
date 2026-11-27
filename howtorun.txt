@@ -1,0 +1,79 @@
+============================================================
+HOW TO RUN — SRMS (SMART RIVER MONITORING SYSTEM, VARUNA)
+============================================================
+
+Ports (different from the Carbon Dashboard so both can run together):
+  API (FastAPI)        http://localhost:8010   docs: http://localhost:8010/docs
+  Frontend (Next.js)   http://localhost:3010
+  PostgreSQL           localhost:5433  (db / user / password: srms)
+
+
+1. FIRST TIME SETUP (from project root: SRMS/)
+------------------------------------------------------------
+# Step 1: Build and start Docker services (database, fast_backend, log_collector)
+docker compose up -d --build
+
+# Step 2: Run migrations, create views and load the seed / dummy data (about 20 s)
+./fast_backend/start.sh
+
+# Step 3: Start the Next.js frontend (frontend service is commented out in docker-compose.yml)
+cd frontend
+npm install
+npm run dev
+
+
+2. NEXT TIME / NORMAL RESTART (keeps existing database data)
+------------------------------------------------------------
+# Stop containers (keeps volumes)
+docker compose down
+
+# Start containers again (no need to run start.sh again; the simulator fills the gap since the last stop,
+# up to 7 days)
+docker compose up -d
+
+# Start frontend
+cd frontend
+npm run dev
+
+# Tip: If you only edited Python files in fast_backend/, just restart fast_backend:
+docker compose restart fast_backend
+
+# Tip: If you edited Dockerfile or requirements.txt, rebuild:
+docker compose up -d --build
+
+
+3. IF YOU RUN "docker compose down -v" (wipes the database volume)
+------------------------------------------------------------
+docker compose up -d --build
+./fast_backend/start.sh
+
+
+4. CHANGED A MODEL (fast_backend/app/database/models/*)
+------------------------------------------------------------
+# start.sh regenerates the migration from the models and applies it; loaders only fill empty tables.
+./fast_backend/start.sh
+
+
+5. FULL CLEAN OF THIS PROJECT (containers, volumes, images, caches)
+------------------------------------------------------------
+./del.sh          # asks for confirmation
+./del.sh -y       # no prompt
+
+
+6. USEFUL COMMANDS
+------------------------------------------------------------
+# Logs (also written to ./logs/<service>.log by log_collector)
+docker compose logs -f fast_backend
+
+# psql into the database
+docker compose exec database psql -U srms -d srms
+
+# Re-run only the data loaders
+docker compose exec fast_backend python -m script.load_database
+
+# Push a reading as a device would (device_id = stations.device_id)
+curl -X POST localhost:8010/api/ingest/readings -H 'content-type: application/json' \
+  -d '{"device_id":"SRMS-IOT-VR-05","readings":{"ph":7.2,"do":3.1,"turbidity":22}}'
+
+# Stop the dummy simulator (when real devices send data): set SIMULATE_LIVE=false in .env, then
+docker compose up -d

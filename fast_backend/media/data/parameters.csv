@@ -1,0 +1,18 @@
+key,label,unit,min_limit,max_limit,group_name,sort_order
+ph,pH,,6.5,8.5,Water quality,1
+do,Dissolved Oxygen,mg/L,5.0,,Water quality,2
+ec,Electrical Conductivity,µS/cm,,1500,Water quality,3
+turbidity,Turbidity,NTU,,25,Water quality,4
+temperature,Water Temperature,°C,,,Water quality,5
+orp,ORP,mV,100,,Water quality,6
+nitrate,Nitrate (NO₃-N),mg/L,,10,Nutrients,7
+ammonium,Ammonium (NH₄-N),mg/L,,1.2,Nutrients,8
+phosphate,Phosphate (PO₄),mg/L,,0.4,Nutrients,9
+chlorophyll,Chlorophyll-a,µg/L,,30,Nutrients,10
+bod,BOD (proxy),mg/L,,3,Organic load,11
+cod,COD (proxy),mg/L,,30,Organic load,12
+water_level,Water Level,m,,,Hydrology,13
+flow,Discharge,m³/s,,,Hydrology,14
+rainfall,Rainfall,mm/15min,,,Meteorology,15
+air_temp,Air Temperature,°C,,,Meteorology,16
+humidity,Humidity,%,,,Meteorology,17

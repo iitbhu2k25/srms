@@ -1,0 +1,48 @@
+{
+  "mission_code": "MS-2026-11-27-01",
+  "name": "Urban reach sampling run",
+  "vessel": "SMART-STREAM USV-01",
+  "loop_minutes": 60,
+  "waypoints": [
+    {
+      "seq": 1,
+      "lat": 25.34,
+      "lon": 82.975,
+      "label": "Ardali Bazar outfall",
+      "action": "sample",
+      "bottle": 1
+    },
+    {
+      "seq": 2,
+      "lat": 25.335,
+      "lon": 82.99,
+      "label": "Shastri Ghat",
+      "action": "measure",
+      "bottle": null
+    },
+    {
+      "seq": 3,
+      "lat": 25.33,
+      "lon": 83.005,
+      "label": "Chaukaghat",
+      "action": "sample",
+      "bottle": 2
+    },
+    {
+      "seq": 4,
+      "lat": 25.331,
+      "lon": 83.025,
+      "label": "Nakkhi Ghat outfall",
+      "action": "sample",
+      "bottle": 3
+    },
+    {
+      "seq": 5,
+      "lat": 25.327,
+      "lon": 83.045,
+      "label": "Sarai Mohana",
+      "action": "measure",
+      "bottle": null
+    }
+  ]
+}

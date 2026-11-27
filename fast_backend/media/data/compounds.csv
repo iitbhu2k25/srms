@@ -1,0 +1,12 @@
+name,compound_class,marker_for,pnec_ng_l
+Caffeine,Personal care / lifestyle,Sewage,1200
+Carbamazepine,Pharmaceutical,Sewage,500
+Diclofenac,Pharmaceutical,Sewage / hospital,50
+Sulfamethoxazole,Antibiotic,Hospital,600
+Atrazine,Pesticide,Agriculture,600
+Imidacloprid,Pesticide,Agriculture,13
+PFOS,PFAS,Industrial,0.65
+PFOA,PFAS,Industrial,100
+Bisphenol A,Industrial chemical,Industrial / plastics,240
+17β-Estradiol,Hormone,Sewage,0.4
+Triclosan,Personal care,Sewage,20
