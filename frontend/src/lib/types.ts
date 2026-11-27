@@ -110,6 +110,7 @@ export interface BoatStatus {
   waypoints: Waypoint[];
   bottles: { id: number; volume_ml: number; filled: boolean; waypoint: number | null; filled_at: string | null }[];
   track: [number, number][];
+  route: [number, number][];
   water_quality: Record<string, number>;
 }
 
@@ -220,13 +221,78 @@ export interface Overview {
     critical_alerts: number;
     samples_this_season: number;
     hotspots: number;
+    untapped_drains: number;
+    untreated_discharge_mld: number;
     last_sync: string;
   };
-  river_line: [number, number][];
 }
 
 export interface HealthHistoryPoint {
   month: string;
   rhi: number;
   by_station: Record<string, number>;
+}
+
+// ---- GIS layers (fast_backend/app/api/schema/gis_schema.py) ----
+
+export interface Drain {
+  drain_code: number;
+  name: string | null;
+  river_name: string;
+  river_code: number;
+  tapping_status: "Tapped" | "Untapped" | "Partial";
+  discharge: number | null;
+  elevation_m: number | null;
+  lat: number;
+  lon: number;
+}
+
+export interface DrainSummary {
+  river_name: string;
+  drains: number;
+  tapped: number;
+  partial: number;
+  untapped: number;
+  with_discharge: number;
+  discharge_total: number;
+  discharge_untreated: number;
+}
+
+export interface Stp {
+  stp_code: number;
+  name: string;
+  status: string | null;
+  maintained_by: string | null;
+  stp_type: string | null;
+  capacity_mld: number | null;
+  utilized_mld: number | null;
+  utilization_pct: number | null;
+  overloaded: boolean;
+  bod_actual: number | null;
+  bod_design: number | null;
+  cod_actual: number | null;
+  cod_design: number | null;
+  tss_actual: number | null;
+  tss_design: number | null;
+  ph_actual: number | null;
+  ph_design: number | null;
+  fc_actual: number | null;
+  fc_design: number | null;
+  exceedances: string[];
+  remarks: string | null;
+  tapped_drains: number[];
+  river_name: string | null;
+  district: string | null;
+  lat: number;
+  lon: number;
+  footprint: GeoJSON.Geometry;
+}
+
+export interface NearbySources {
+  station_id: string;
+  radius_m: number;
+  drains: (Drain & { distance_m: number })[];
+  untapped: number;
+  discharge_untreated: number;
+  nearest_stps: { stp_code: number; name: string; status: string | null; capacity_mld: number | null; utilized_mld: number | null; distance_m: number }[];
 }

@@ -1,9 +1,9 @@
 hotspot_code,hotspot_type,lat,lon,survey_code,detail,severity
-H-01,Outfall,25.3405,82.9745,SV-2026-POST,Thermal anomaly +4.1 °C; active untreated discharge,high
-H-02,Outfall,25.3312,83.0255,SV-2026-POST,"Unrecorded drain, foam and discolouration",high
-H-03,Outfall,25.3352,82.9895,SV-2026-PRE,Thermal anomaly +2.3 °C,medium
-H-04,Encroachment,25.3325,83.012,SV-2026-POST,New construction within 50 m of bank,medium
-H-05,Bank erosion,25.366,82.915,SV-2026-POST,Bank retreat 2.8 m since pre-monsoon,medium
-H-06,Siltation,25.3285,83.038,SV-2026-POST,Bed raised 0.6 m; flow capacity reduced,high
-H-07,Solid waste,25.339,82.98,SV-2026-PRE,"Dumping site on floodplain, ~1,200 m²",low
-H-08,Algal bloom,25.37,82.802,SV-2026-PRE,NDCI > 0.25 over 400 m stretch,low
+H-01,Outfall,25.342,82.967,SV-2026-POST,"Drain 58: untapped, 60 MLD — Thermal anomaly +4.1 °C",high
+H-02,Outfall,25.341,83.029,SV-2026-POST,"Drain 41: untapped, 60 MLD — Unrecorded drain, foam and discolouration",high
+H-03,Outfall,25.343,83.001,SV-2026-PRE,"Drain 61: untapped, 60 MLD — Thermal anomaly +2.3 °C",medium
+H-04,Encroachment,25.342219,83.013037,SV-2026-POST,New construction within 50 m of bank,medium
+H-05,Bank erosion,25.361754,82.91417,SV-2026-POST,Bank retreat 2.8 m since pre-monsoon,medium
+H-06,Siltation,25.329696,83.03668,SV-2026-POST,Bed raised 0.6 m; flow capacity reduced,high
+H-07,Solid waste,25.340687,82.979088,SV-2026-PRE,"Dumping site on floodplain, ~1,200 m²",low
+H-08,Algal bloom,25.39338,82.635787,SV-2026-PRE,NDCI > 0.25 over 400 m stretch,low

@@ -25,3 +25,13 @@ export function rhiStatus(rhi: number): Status {
   if (rhi >= 40) return "poor";
   return "critical";
 }
+
+export const TAPPING_COLOR: Record<string, string> = {
+  Untapped: "#dc2626",
+  Partial: "#f59e0b",
+  Tapped: "#16a34a",
+};
+
+export const RIVER_COLOR = "#0284c7";
+export const BASIN_COLOR = "#0e7490";
+export const STP_COLOR = "#7c3aed";

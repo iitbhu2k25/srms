@@ -5,6 +5,7 @@ import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAx
 import Map from "@/components/Map";
 import { Async, Badge, Card, PageHeader } from "@/components/ui";
 import { useApi } from "@/lib/api";
+import { useBasinLayers } from "@/lib/gis";
 import { fmtDate, fmtNum } from "@/lib/format";
 import type { Campaign, Sample, SourceApportionment } from "@/lib/types";
 
@@ -30,6 +31,7 @@ export default function PollutantsPage() {
   const [cid, setCid] = useState<string>("C-2026-POST");
   const samples = useApi<Sample[]>(`/lab/samples?campaign_id=${cid}`);
   const appo = useApi<SourceApportionment[]>(`/lab/apportionment/${cid}`);
+  const basin = useBasinLayers();
 
   const compounds = useMemo(() => {
     const set: string[] = [];
@@ -90,7 +92,7 @@ export default function PollutantsPage() {
           <Async data={samples.data} error={samples.error}>
             {(list) => (
               <>
-                <Map height={300} bounds={list.map((s) => [s.lat, s.lon] as [number, number])}
+                <Map height={300} geojson={basin} bounds={list.map((s) => [s.lat, s.lon] as [number, number])}
                   markers={list.map((s) => ({
                     id: s.id, lat: s.lat, lon: s.lon, color: MATRIX_COLOR[s.matrix], radius: s.matrix === "water" ? 7 : 6,
                     label: `${s.site} · ${s.matrix} · ${s.detections.length} compounds`,

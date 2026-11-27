@@ -7,9 +7,10 @@ import Map from "@/components/Map";
 import TimeSeriesChart from "@/components/charts";
 import { Async, Badge, Card, PageHeader, StatusBadge } from "@/components/ui";
 import { useApi } from "@/lib/api";
-import { STATUS_COLOR } from "@/lib/colors";
+import { useBasinLayers } from "@/lib/gis";
+import { STATUS_COLOR, STP_COLOR, TAPPING_COLOR } from "@/lib/colors";
 import { fmtDate, fmtNum, fmtTime } from "@/lib/format";
-import type { ParameterMeta, ParameterSeries, StationForecast, StationLatest } from "@/lib/types";
+import type { NearbySources, ParameterMeta, ParameterSeries, StationForecast, StationLatest } from "@/lib/types";
 
 const RANGES = [
   { label: "24 h", hours: 24 },
@@ -30,6 +31,8 @@ export default function StationDetailPage({ params }: { params: Promise<{ id: st
   const meta = useApi<Record<string, ParameterMeta>>("/parameters");
   const forecast = useApi<StationForecast>(`/stations/${id}/forecast`);
   const series = useApi<ParameterSeries[]>(`/stations/${id}/series?parameters=${selected.join(",")}&hours=${hours}`);
+  const nearby = useApi<NearbySources>(`/stations/${id}/nearby?radius_km=2`);
+  const rivers = useBasinLayers({ boundary: false });
 
   const groups = useMemo(() => {
     const g: Record<string, string[]> = {};
@@ -102,9 +105,39 @@ export default function StationDetailPage({ params }: { params: Promise<{ id: st
                     )}
                   </Async>
                 </Card>
-                <Card flush>
-                  <Map height={180} center={[s.lat, s.lon]} zoom={13}
-                    markers={[{ id: s.id, lat: s.lat, lon: s.lon, color: STATUS_COLOR[s.status], radius: 10, label: s.name }]} />
+                <Card title="Pollution sources within 2 km" sub="drain survey (media/Drains)" flush>
+                  <Map height={220} center={[s.lat, s.lon]} zoom={14} geojson={rivers}
+                    markers={[
+                      ...(nearby.data?.drains ?? []).map((d) => ({
+                        id: `d${d.drain_code}`, lat: d.lat, lon: d.lon, radius: 5, color: TAPPING_COLOR[d.tapping_status],
+                        label: `Drain ${d.drain_code}${d.name ? ` · ${d.name}` : ""} — ${d.tapping_status}${d.discharge != null ? `, ${d.discharge} MLD` : ""}`,
+                      })),
+                      { id: s.id, lat: s.lat, lon: s.lon, color: STATUS_COLOR[s.status], radius: 10, label: s.name },
+                    ]} />
+                  <Async data={nearby.data} error={nearby.error}>
+                    {(n) => (
+                      <div className="card-body">
+                        <div className="row small" style={{ marginBottom: 8 }}>
+                          <b>{n.drains.length}</b> drains · <b style={{ color: TAPPING_COLOR.Untapped }}>{n.untapped}</b> untapped / partial ·
+                          <b>{fmtNum(n.discharge_untreated, 0)} MLD</b> untreated
+                        </div>
+                        {n.drains.filter((d) => d.tapping_status !== "Tapped" && d.discharge != null)
+                          .sort((a, b) => (b.discharge ?? 0) - (a.discharge ?? 0)).slice(0, 4).map((d) => (
+                          <div key={d.drain_code} className="row small" style={{ flexWrap: "nowrap" }}>
+                            <span className="dot" style={{ background: TAPPING_COLOR[d.tapping_status] }} />
+                            <span style={{ flex: 1 }}>Drain {d.drain_code}{d.name ? ` · ${d.name}` : ""}</span>
+                            <b>{d.discharge} MLD</b><span className="muted">{d.distance_m} m</span>
+                          </div>
+                        ))}
+                        {n.nearest_stps[0] && (
+                          <div className="small muted" style={{ marginTop: 8 }}>
+                            <span className="dot" style={{ background: STP_COLOR }} /> Nearest STP: <b>{n.nearest_stps[0].name}</b>,{" "}
+                            {(n.nearest_stps[0].distance_m / 1000).toFixed(1)} km
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </Async>
                 </Card>
               </div>
             </div>

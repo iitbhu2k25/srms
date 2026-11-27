@@ -5,8 +5,9 @@ import { Area, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, 
 import Map from "@/components/Map";
 import { Async, Badge, Card, PageHeader, SeverityBadge } from "@/components/ui";
 import { useApi } from "@/lib/api";
+import { useBasinLayers } from "@/lib/gis";
 import { fmtDate } from "@/lib/format";
-import type { CrossSection, Hotspot, Overview, Survey } from "@/lib/types";
+import type { CrossSection, Hotspot, Survey } from "@/lib/types";
 
 const TYPE_COLOR: Record<string, string> = {
   Outfall: "#dc2626", Encroachment: "#7c3aed", "Bank erosion": "#a16207", Siltation: "#ea580c", "Solid waste": "#475569", "Algal bloom": "#16a34a",
@@ -16,7 +17,7 @@ export default function SurveysPage() {
   const surveys = useApi<Survey[]>("/surveys");
   const hotspots = useApi<Hotspot[]>("/surveys/hotspots");
   const xs = useApi<CrossSection[]>("/surveys/cross-sections");
-  const overview = useApi<Overview>("/overview");
+  const rivers = useBasinLayers({ boundary: false, riverWeight: 4 });
   const [type, setType] = useState<string>("");
   const [xsIdx, setXsIdx] = useState(1);
 
@@ -49,7 +50,7 @@ export default function SurveysPage() {
             <button className={`chip ${!type ? "on" : ""}`} onClick={() => setType("")}>All</button>
             {Object.keys(TYPE_COLOR).map((t) => <button key={t} className={`chip ${type === t ? "on" : ""}`} onClick={() => setType(t)}>{t}</button>)}
           </div>} flush>
-          <Map height={420} satellite center={[25.345, 82.96]} zoom={12} river={overview.data?.river_line}
+          <Map height={420} satellite center={[25.345, 82.96]} zoom={12} geojson={rivers}
             markers={shown.map((h) => ({ id: h.id, lat: h.lat, lon: h.lon, color: TYPE_COLOR[h.type] ?? "#334155", radius: 8, label: `${h.type}: ${h.detail}` }))} />
           <div className="map-legend">
             {Object.entries(TYPE_COLOR).map(([k, c]) => <span key={k}><span className="dot" style={{ background: c }} />{k}</span>)}

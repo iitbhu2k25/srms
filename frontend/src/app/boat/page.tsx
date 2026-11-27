@@ -5,6 +5,7 @@ import { Battery, Compass, Gauge, Home, Navigation, Pause, Play, Satellite, Test
 import Map from "@/components/Map";
 import { Async, Badge, Card, PageHeader, Stat } from "@/components/ui";
 import { sendApi, useApi } from "@/lib/api";
+import { useBasinLayers } from "@/lib/gis";
 import { fmtNum, fmtTime } from "@/lib/format";
 import type { BoatStatus, CommandAck } from "@/lib/types";
 
@@ -15,6 +16,7 @@ const WQ_LABEL: Record<string, [string, string]> = {
 
 export default function BoatPage() {
   const { data, error } = useApi<BoatStatus>("/boat/status", { refreshInterval: 3000 });
+  const rivers = useBasinLayers({ boundary: false, riverWeight: 2 });
   const [log, setLog] = useState<CommandAck[]>([]);
   const [target, setTarget] = useState({ lat: "25.3350", lon: "82.9900" });
 
@@ -47,10 +49,11 @@ export default function BoatPage() {
               <Card title={b.mission_name} sub={b.mission_id} flush>
                 <Map
                   height={440}
-                  bounds={b.waypoints.map((w) => [w.lat, w.lon] as [number, number])}
+                  bounds={b.route.length ? b.route : b.waypoints.map((w) => [w.lat, w.lon] as [number, number])}
                   satellite
+                  geojson={rivers}
                   lines={[
-                    { id: "plan", positions: b.waypoints.map((w) => [w.lat, w.lon]), color: "#ffffff", weight: 2, dash: "6 6", label: "Planned route" },
+                    { id: "plan", positions: b.route, color: "#ffffff", weight: 2, dash: "6 6", label: "Planned route (along the river)" },
                     { id: "track", positions: b.track, color: "#22d3ee", weight: 4, label: "Travelled track" },
                   ]}
                   markers={[

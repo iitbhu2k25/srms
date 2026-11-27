@@ -8,7 +8,7 @@
 
 LOG_DIR=/logs
 STATE_DIR=$LOG_DIR/.state
-SERVICES=${LOG_SERVICES:-"fast_backend database"}
+SERVICES=${LOG_SERVICES:-"fast_backend database cloudflared"}
 MAX_BYTES=${LOG_MAX_BYTES:-10485760}
 KEEP=${LOG_KEEP:-5}
 OWNER=${LOG_OWNER:-1000:1000}

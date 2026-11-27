@@ -5,6 +5,17 @@ x-postgres-env: &postgres-env
 
 # Ports differ from the Carbon Dashboard (8000 / 5432 / 3000) so both stacks can run on one machine.
 services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    # Named tunnel "srms". Its public hostname (srms-api.slcrdss.in -> http://fast_backend:8000) is managed in the
+    # Cloudflare dashboard; the token lives in ./.env. The frontend (srms.slcrdss.in) is on Vercel, not the tunnel.
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:?set CLOUDFLARE_TUNNEL_TOKEN in .env}
+    depends_on:
+      - fast_backend
+    restart: unless-stopped
+
   fast_backend:
     build:
       context: ./fast_backend
@@ -71,7 +82,7 @@ services:
     image: docker:27-cli
     entrypoint: ["sh", "/logs/collect-logs.sh"]
     environment:
-      LOG_SERVICES: fast_backend database
+      LOG_SERVICES: fast_backend database cloudflared
       LOG_MAX_BYTES: 10485760
       LOG_KEEP: 5
       # Host user that should own the log files.

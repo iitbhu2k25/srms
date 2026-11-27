@@ -5,6 +5,7 @@ import { CartesianGrid, Legend, Line, LineChart, ReferenceLine, ResponsiveContai
 import Map from "@/components/Map";
 import { Async, Badge, Card, PageHeader } from "@/components/ui";
 import { useApi } from "@/lib/api";
+import { useBasinLayers } from "@/lib/gis";
 import { fmtDate } from "@/lib/format";
 import type { TemSection, TemTransect, Well, WellSeries } from "@/lib/types";
 
@@ -68,6 +69,7 @@ export default function SubsurfacePage() {
   const wells = useApi<Well[]>("/groundwater/wells", { refreshInterval: 60_000 });
   const [wid, setWid] = useState("GW-03");
   const ws = useApi<WellSeries>(`/groundwater/wells/${wid}/series?days=365`);
+  const basin = useBasinLayers();
 
   const t = transects.data?.find((x) => x.id === tid);
 
@@ -91,10 +93,10 @@ export default function SubsurfacePage() {
           {t && <p className="small" style={{ marginBottom: 0 }}><b>Interpretation:</b> {t.finding}</p>}
         </Card>
         <Card title="Transects & wells" flush>
-          <Map height={420}
+          <Map height={420} geojson={basin}
             lines={(transects.data ?? []).map((x) => ({ id: x.id, positions: [x.start, x.end], color: x.id === tid ? "#dc2626" : "#7c3aed", weight: 5, label: x.name }))}
             markers={(wells.data ?? []).map((w) => ({ id: w.id, lat: w.lat, lon: w.lon, color: EXCHANGE_COLOR[w.exchange], label: `${w.id} · ${w.exchange}` }))}
-            center={[25.39, 82.78]} zoom={10} />
+            center={[25.42, 82.62]} zoom={9} />
           <div className="map-legend">
             <span><span className="dot" style={{ background: "#dc2626" }} />selected transect</span>
             {Object.entries(EXCHANGE_COLOR).map(([k, c]) => <span key={k}><span className="dot" style={{ background: c }} />{k} well</span>)}

@@ -1,4 +1,4 @@
 transect_code,name,survey_date,length_m,start_lat,start_lon,end_lat,end_lon,station_code,finding
-TEM-T1,Basuhi confluence transect,2026-04-22,1200,25.442,82.544,25.418,82.556,VR-02,Thick sandy aquifer (18–60 m) with a buried paleo-channel near the right bank; gaining reach.
-TEM-T2,Morwa confluence transect,2026-04-28,900,25.38,82.796,25.36,82.804,VR-03,Clay cap 6–14 m disconnects river from aquifer; minimal exchange in dry season.
-TEM-T3,Urban reach transect (Ardali Bazar),2026-05-06,1000,25.35,82.97,25.33,82.98,VR-05,Low-resistivity plume (< 10 Ω·m) at 5–25 m below the drain outfall: probable sewage infiltration.
+TEM-T1,Basuhi confluence transect,2026-04-22,1200,25.396154,82.698658,25.391644,82.687815,VR-02,Thick sandy aquifer (18–60 m) with a buried paleo-channel near the right bank; gaining reach.
+TEM-T2,Morwa confluence transect,2026-04-28,900,25.395938,82.621206,25.389499,82.626662,VR-03,Clay cap 6–14 m disconnects river from aquifer; minimal exchange in dry season.
+TEM-T3,Urban reach transect (Ardali Bazar),2026-05-06,1000,25.342745,82.977739,25.336117,82.970996,VR-05,Low-resistivity plume (< 10 Ω·m) at 5–25 m below the drain outfall: probable sewage infiltration.

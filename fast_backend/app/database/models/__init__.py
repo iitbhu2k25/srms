@@ -1,9 +1,5 @@
 from app.database.models.base import Base
-from app.database.models.station import (
-    Station,
-    Parameter,
-    RiverCenterlinePoint,
-)
+from app.database.models.station import Station, Parameter
 from app.database.models.reading import RiverReading, READING_COLUMNS
 from app.database.models.groundwater import Well, WellReading
 from app.database.models.boat import BoatMission, BoatWaypoint, BoatCommand

@@ -1,10 +1,13 @@
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
-import { FlaskConical } from "lucide-react";
+import { Database, FlaskConical } from "lucide-react";
 import { STATUS_COLOR, SEVERITY_COLOR } from "@/lib/colors";
 import type { Status } from "@/lib/types";
 
-export function PageHeader({ title, subtitle, actions }: { title: string; subtitle?: string; actions?: ReactNode }) {
+/** `source="survey"` marks pages built only from the real GIS / survey layers (media/*.shp). */
+export function PageHeader({ title, subtitle, actions, source = "dummy" }: {
+  title: string; subtitle?: string; actions?: ReactNode; source?: "dummy" | "survey";
+}) {
   return (
     <div className="page-head">
       <div>
@@ -13,7 +16,9 @@ export function PageHeader({ title, subtitle, actions }: { title: string; subtit
       </div>
       <div className="row">
         {actions}
-        <span className="dummy-banner"><FlaskConical size={13} /> Dummy data</span>
+        {source === "survey"
+          ? <span className="dummy-banner survey"><Database size={13} /> Survey data</span>
+          : <span className="dummy-banner"><FlaskConical size={13} /> Dummy data</span>}
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 station_code,name,lat,lon,reach,district,chainage_km,profile,telemetry,installed,device_id,is_active
-VR-01,Phulpur Upstream Reference,25.548,82.09,Upstream reference,Prayagraj,0,clean,NB-IoT,2026-03-12,SRMS-IOT-VR-01,True
-VR-02,Basuhi Confluence,25.43,82.55,Tributary confluence,Bhadohi,68,moderate,GSM,2026-03-18,SRMS-IOT-VR-02,True
-VR-03,Morwa Confluence,25.37,82.8,Tributary confluence,Varanasi,142,moderate,LoRaWAN,2026-03-25,SRMS-IOT-VR-03,False
-VR-04,Rameshwar,25.383,82.866,Urban entry,Varanasi,160,moderate,LoRaWAN,2026-04-02,SRMS-IOT-VR-04,True
-VR-05,Ardali Bazar Drain,25.34,82.975,Urban drain cluster,Varanasi,178,severe,LoRaWAN,2026-04-02,SRMS-IOT-VR-05,True
-VR-06,Chaukaghat,25.33,83.005,Urban drain cluster,Varanasi,184,poor,LoRaWAN,2026-04-05,SRMS-IOT-VR-06,True
-VR-07,Nakkhi Ghat Drain,25.331,83.025,Urban drain cluster,Varanasi,188,severe,LoRaWAN,2026-04-05,SRMS-IOT-VR-07,True
-VR-08,Sarai Mohana Confluence,25.327,83.045,Outlet to Ganga,Varanasi,192,poor,GSM,2026-04-10,SRMS-IOT-VR-08,True
+VR-01,Phulpur Upstream Reference,25.654948,82.044132,Upstream reference,Prayagraj,4.0,clean,NB-IoT,2026-03-12,SRMS-IOT-VR-01,True
+VR-02,Basuhi Confluence,25.393899,82.693236,Tributary confluence,Bhadohi,166.6,moderate,GSM,2026-03-18,SRMS-IOT-VR-02,True
+VR-03,Morwa Confluence,25.392718,82.623934,Tributary confluence,Varanasi,158.0,moderate,LoRaWAN,2026-03-25,SRMS-IOT-VR-03,False
+VR-04,Rameshwar,25.381904,82.864801,Urban entry,Varanasi,194.1,moderate,LoRaWAN,2026-04-02,SRMS-IOT-VR-04,True
+VR-05,Ardali Bazar Drain,25.339431,82.974368,Urban drain cluster,Varanasi,213.5,severe,LoRaWAN,2026-04-02,SRMS-IOT-VR-05,True
+VR-06,Chaukaghat,25.335727,82.999484,Urban drain cluster,Varanasi,216.6,poor,LoRaWAN,2026-04-05,SRMS-IOT-VR-06,True
+VR-07,Nakkhi Ghat Drain,25.330679,83.034707,Urban drain cluster,Varanasi,222.9,severe,LoRaWAN,2026-04-05,SRMS-IOT-VR-07,True
+VR-08,Sarai Mohana Confluence,25.329249,83.044651,Outlet to Ganga,Varanasi,224.7,poor,GSM,2026-04-10,SRMS-IOT-VR-08,True

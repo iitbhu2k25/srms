@@ -11,6 +11,8 @@ class Kpi(BaseModel):
     critical_alerts: int
     samples_this_season: int
     hotspots: int
+    untapped_drains: int            # Varuna drains not (fully) tapped
+    untreated_discharge_mld: float  # surveyed discharge of those drains
     last_sync: str
 
 
@@ -22,7 +24,6 @@ class HealthHistoryPoint(BaseModel):
 
 class Overview(BaseModel):
     kpi: Kpi
-    river_line: list[list[float]]
 
 
 class IngestReading(BaseModel):

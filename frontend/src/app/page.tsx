@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Activity, AlertTriangle, FlaskConical, Gauge, MapPin } from "lucide-react";
+import { Activity, AlertTriangle, Gauge, MapPin, Waves } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import Map from "@/components/Map";
 import { Async, Card, PageHeader, SeverityBadge, Stat, StatusBadge } from "@/components/ui";
 import { useApi } from "@/lib/api";
+import { useBasinLayers } from "@/lib/gis";
 import { STATUS_COLOR, SEVERITY_COLOR, rhiStatus } from "@/lib/colors";
 import { fmtNum, timeAgo } from "@/lib/format";
 import type { Alert, Hotspot, Overview, StationLatest } from "@/lib/types";
@@ -17,6 +18,7 @@ export default function DashboardPage() {
   const stations = useApi<StationLatest[]>("/stations", { refreshInterval: 60_000 });
   const alerts = useApi<Alert[]>("/alerts", { refreshInterval: 60_000 });
   const hotspots = useApi<Hotspot[]>("/surveys/hotspots");
+  const basin = useBasinLayers();
 
   const k = overview.data?.kpi;
   const open = alerts.data?.filter((a) => a.status !== "resolved") ?? [];
@@ -36,15 +38,15 @@ export default function DashboardPage() {
           hint={k && `last sync ${timeAgo(k.last_sync)}`} />
         <Stat icon={AlertTriangle} label="Open alerts" color="#dc2626" value={k?.active_alerts ?? "—"}
           hint={k && `${k.critical_alerts} critical · sampling auto-triggered`} />
-        <Stat icon={FlaskConical} label="Samples this season" color="#9333ea" value={k?.samples_this_season ?? "—"}
-          hint={k && `${k.hotspots} drone hotspots mapped`} />
+        <Stat icon={Waves} label="Untapped Varuna drains" color="#9333ea" value={k?.untapped_drains ?? "—"}
+          hint={k && `${fmtNum(k.untreated_discharge_mld, 0)} MLD untreated · ${k.samples_this_season} lab samples this season`} />
       </div>
 
       <div className="grid g-main">
         <Card title="Monitoring network" sub="click a station for details" flush>
           <Map
             height={460}
-            river={overview.data?.river_line}
+            geojson={basin}
             markers={[
               ...(hotspots.data ?? []).map((h) => ({
                 id: h.id, lat: h.lat, lon: h.lon, radius: 5, color: SEVERITY_COLOR[h.severity],

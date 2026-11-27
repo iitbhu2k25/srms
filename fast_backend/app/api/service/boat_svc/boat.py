@@ -11,6 +11,7 @@ from app.api.service.boat_svc.navigation import haversine, simulate
 from app.api.service.simulator_svc.generator import rng
 from app.database.crud.boat.async_crud import Boat_crud
 from app.database.crud.reading.async_crud import Reading_crud
+from app.database.crud.spatial.async_crud import Spatial_crud
 from app.database.crud.station.async_crud import Station_crud
 
 WQ_KEYS = ("ph", "do", "ec", "turbidity", "temperature", "orp")
@@ -30,7 +31,10 @@ class boat_svc:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No active boat mission")
         waypoints = await crud.waypoints(mission["mission_code"])
         now = datetime.now(timezone.utc)
-        sim = simulate(waypoints, mission["loop_minutes"], now)
+        # The boat follows the river channel (media/Rivers) between the first and last waypoint.
+        path = await Spatial_crud(db).river_path("Varuna", (waypoints[0]["lat"], waypoints[0]["lon"]),
+                                                 (waypoints[-1]["lat"], waypoints[-1]["lon"]))
+        sim = simulate(waypoints, mission["loop_minutes"], now, path)
 
         # On-board water quality: latest reading of the nearest IoT station (stand-in for the ESP32 unit).
         stations = await Station_crud(db).get_stations()
@@ -45,7 +49,7 @@ class boat_svc:
             "battery_pct": round(100 - sim["progress"] * 38, 1),
             "signal": "4G · -71 dBm", "gps_fix": "RTK float · 0.4 m", "last_update": now.isoformat(),
             "mission_id": mission["mission_code"], "mission_name": mission["name"],
-            "waypoints": sim["waypoints"], "bottles": sim["bottles"], "track": sim["track"],
+            "waypoints": sim["waypoints"], "bottles": sim["bottles"], "track": sim["track"], "route": sim["route"],
             "water_quality": {k: wq[k] for k in WQ_KEYS if wq.get(k) is not None},
         }
 

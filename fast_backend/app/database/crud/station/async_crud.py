@@ -2,7 +2,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database.crud.base.async_base import CrudBase
-from app.database.models import Parameter, RiverCenterlinePoint, Station
+from app.database.models import Parameter, Station
 
 STATION_COLUMNS = [
     Station.station_code, Station.name, Station.lat, Station.lon, Station.reach, Station.district,
@@ -30,7 +30,3 @@ class Station_crud(CrudBase):
         query = select(Parameter.key, Parameter.label, Parameter.unit, Parameter.min_limit, Parameter.max_limit,
                        Parameter.group_name).order_by(Parameter.sort_order)
         return await self._rows(query)
-
-    async def get_centerline(self) -> list[list[float]]:
-        rows = await self._rows(select(RiverCenterlinePoint.lat, RiverCenterlinePoint.lon).order_by(RiverCenterlinePoint.seq))
-        return [[r["lat"], r["lon"]] for r in rows]

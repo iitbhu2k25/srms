@@ -1,7 +1,9 @@
 from fastapi import APIRouter, Query
 
+from app.api.schema.gis_schema import NearbySources
 from app.api.schema.station_schema import ParameterSeries, StationForecast, StationLatest
 from app.api.service.forecast_svc import forecast_svc
+from app.api.service.gis_svc import gis_svc
 from app.api.service.station_svc import station_svc
 from app.database.config.dependency import db_read
 
@@ -34,3 +36,9 @@ async def get_series(
 async def get_forecast(db: db_read, station_code: str):
     """3-day faecal coliform forecast (placeholder for the AI bacterial forecasting model)."""
     return await forecast_svc.get_forecast(db, station_code)
+
+
+@router.get("/{station_code}/nearby", response_model=NearbySources)
+async def get_nearby(db: db_read, station_code: str, radius_km: float = Query(2.0, gt=0, le=20)):
+    """Drain outfalls within radius_km of the station and the two nearest STPs (PostGIS)."""
+    return await gis_svc.get_nearby(db, station_code, radius_km * 1000)

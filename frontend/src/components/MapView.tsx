@@ -1,7 +1,7 @@
 "use client";
 
 import "leaflet/dist/leaflet.css";
-import { CircleMarker, MapContainer, Polyline, Popup, TileLayer, Tooltip, useMap } from "react-leaflet";
+import { CircleMarker, GeoJSON, MapContainer, Polyline, Popup, TileLayer, Tooltip, useMap } from "react-leaflet";
 import { useEffect, type ReactNode } from "react";
 import type { LatLngBoundsExpression } from "leaflet";
 
@@ -26,6 +26,17 @@ export interface MapLine {
   label?: string;
 }
 
+export interface MapGeoJson {
+  id: string;
+  data: GeoJSON.GeoJsonObject;
+  color: string;
+  weight?: number;
+  fillOpacity?: number;
+  dash?: string;
+  /** Tooltip text; gets the feature's properties when a function. */
+  label?: string | ((props: Record<string, unknown>) => string);
+}
+
 export interface MapViewProps {
   center?: [number, number];
   zoom?: number;
@@ -34,6 +45,8 @@ export interface MapViewProps {
   river?: [number, number][];
   lines?: MapLine[];
   markers?: MapMarker[];
+  /** Vector layers (basin outline, rivers, STP footprints) drawn beneath the markers. */
+  geojson?: MapGeoJson[];
   satellite?: boolean;
 }
 
@@ -46,7 +59,7 @@ function FitBounds({ bounds }: { bounds?: LatLngBoundsExpression }) {
 }
 
 export default function MapView({
-  center = [25.42, 82.6], zoom = 10, height = 420, bounds, river, lines = [], markers = [], satellite,
+  center = [25.48, 82.55], zoom = 9, height = 420, bounds, river, lines = [], markers = [], geojson = [], satellite,
 }: MapViewProps) {
   return (
     <MapContainer center={center} zoom={zoom} style={{ height, width: "100%" }} scrollWheelZoom>
@@ -62,6 +75,18 @@ export default function MapView({
         />
       )}
       <FitBounds bounds={bounds} />
+      {geojson.map((g) => (
+        <GeoJSON
+          key={g.id}
+          data={g.data}
+          style={{ color: g.color, weight: g.weight ?? 2, fillOpacity: g.fillOpacity ?? 0, dashArray: g.dash }}
+          onEachFeature={(feature, layer) => {
+            if (!g.label) return;
+            const text = typeof g.label === "function" ? g.label((feature.properties ?? {}) as Record<string, unknown>) : g.label;
+            layer.bindTooltip(text, { sticky: true });
+          }}
+        />
+      ))}
       {river && <Polyline positions={river} pathOptions={{ color: "#0284c7", weight: 5, opacity: 0.55 }} />}
       {lines.map((l) => (
         <Polyline key={l.id} positions={l.positions} pathOptions={{ color: l.color, weight: l.weight ?? 3, dashArray: l.dash }}>

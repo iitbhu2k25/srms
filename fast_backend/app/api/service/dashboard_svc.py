@@ -7,7 +7,7 @@ from app.api.service.health_svc import health_svc
 from app.api.service.station_svc import station_svc
 from app.database.crud.lab.async_crud import Lab_crud
 from app.database.crud.reading.async_crud import Reading_crud
-from app.database.crud.station.async_crud import Station_crud
+from app.database.crud.spatial.async_crud import Spatial_crud
 from app.database.crud.survey.async_crud import Survey_crud
 
 
@@ -21,6 +21,7 @@ class dashboard_svc:
         rhi_past = sum(health_svc.health_index(r) for r in past) / len(past) if past else rhi_now
         alerts = [a for a in await alert_svc.list_alerts(db, None, None, None) if a["status"] != "resolved"]
         lab = Lab_crud(db)
+        drains = await Spatial_crud(db).drain_summary()
         campaign = await lab.latest_seasonal_campaign()
         last_seen = max((s["last_seen"] for s in latest if s["last_seen"]), default=None)
         return {
@@ -34,9 +35,10 @@ class dashboard_svc:
                 "critical_alerts": sum(a["severity"] == "critical" for a in alerts),
                 "samples_this_season": await lab.count_samples(campaign) if campaign else 0,
                 "hotspots": await Survey_crud(db).count_hotspots(),
+                "untapped_drains": sum(d["untapped"] + d["partial"] for d in drains if d["river_name"] == "Varuna"),
+                "untreated_discharge_mld": round(sum(float(d["discharge_untreated"]) for d in drains if d["river_name"] == "Varuna"), 1),
                 "last_sync": last_seen or datetime.now(timezone.utc).isoformat(),
             },
-            "river_line": await Station_crud(db).get_centerline(),
         }
 
     async def get_health_history(db: AsyncSession, months: int) -> list[dict]:

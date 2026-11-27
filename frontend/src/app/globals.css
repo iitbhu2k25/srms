@@ -50,6 +50,8 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
   padding: 6px 10px; font-size: 12px; display: inline-flex; gap: 6px; align-items: center;
 }
 
+.dummy-banner.survey { background: #ecfdf5; border-color: #a7f3d0; color: #047857; }
+
 /* ---------- layout ---------- */
 .grid { display: grid; gap: 16px; }
 .g-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }

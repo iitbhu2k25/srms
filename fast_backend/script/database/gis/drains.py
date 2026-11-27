@@ -5,7 +5,7 @@ import sys
 import geopandas as gpd
 import pandas as pd
 from shapely.geometry import MultiLineString, MultiPolygon
-from shapely.ops import transform
+import shapely
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from db_connection import MEDIA_DIR, engine, table_has_rows  # noqa: E402
@@ -13,7 +13,7 @@ from db_connection import MEDIA_DIR, engine, table_has_rows  # noqa: E402
 
 def to_2d(geom):
     """Drop Z values (the river shapefile is 3-D)."""
-    return transform(lambda x, y, z=None: (x, y), geom)
+    return shapely.force_2d(geom)
 
 
 TABLE_NAME = 'drains'

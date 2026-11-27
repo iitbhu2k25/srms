@@ -39,7 +39,6 @@ if __name__ == "__main__":
         "gis/drains.py",
         "gis/stps.py",
         # Monitoring network (media/data)
-        "stations/river_centerline.py",
         "stations/stations.py",
         "stations/wells.py",
         # Time series: one year of dummy history (a few seconds)

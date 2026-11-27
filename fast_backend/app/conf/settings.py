@@ -31,6 +31,7 @@ class Settings(BaseSettings):
     CORS_ORIGINS: list[str] = [
         "http://localhost:3010",
         "http://127.0.0.1:3010",
+        "https://srms.slcrdss.in",
     ]
     ENABLE_API_DOCS: bool = True
 

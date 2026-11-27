@@ -37,7 +37,8 @@ class BoatStatus(BaseModel):
     mission_name: str
     waypoints: list[Waypoint]
     bottles: list[Bottle]
-    track: list[list[float]]    # [[lat, lon], ...]
+    track: list[list[float]]    # [[lat, lon], ...] travelled so far in this run
+    route: list[list[float]]    # planned path along the river channel
     water_quality: dict[str, float]
 
 

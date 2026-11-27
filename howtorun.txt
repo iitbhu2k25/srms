@@ -13,7 +13,7 @@ Ports (different from the Carbon Dashboard so both can run together):
 # Step 1: Build and start Docker services (database, fast_backend, log_collector)
 docker compose up -d --build
 
-# Step 2: Run migrations, create views and load the seed / dummy data (about 20 s)
+# Step 2: Run migrations, create views and load the GIS layers (media/*/*.shp) + seed / dummy data (about 25 s)
 ./fast_backend/start.sh
 
 # Step 3: Start the Next.js frontend (frontend service is commented out in docker-compose.yml)
@@ -70,6 +70,13 @@ docker compose exec database psql -U srms -d srms
 
 # Re-run only the data loaders
 docker compose exec fast_backend python -m script.load_database
+
+# Updated a shapefile in media/? Empty its table, then re-run the loaders (each fills only empty tables), e.g.
+docker compose exec database psql -U srms -d srms -c "TRUNCATE drains"
+docker compose exec fast_backend python -m script.load_database
+
+# Moved stations / changed seed points? Snap them onto the real river again
+docker compose exec fast_backend python -m script.tools.snap_seed_to_rivers
 
 # Push a reading as a device would (device_id = stations.device_id)
 curl -X POST localhost:8010/api/ingest/readings -H 'content-type: application/json' \

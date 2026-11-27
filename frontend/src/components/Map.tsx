@@ -13,4 +13,4 @@ export default function Map(props: MapViewProps) {
   return <MapView {...props} />;
 }
 
-export type { MapMarker, MapLine } from "./MapView";
+export type { MapGeoJson, MapLine, MapMarker } from "./MapView";

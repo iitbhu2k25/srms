@@ -6,40 +6,40 @@
   "waypoints": [
     {
       "seq": 1,
-      "lat": 25.34,
-      "lon": 82.975,
+      "lat": 25.339431,
+      "lon": 82.974368,
       "label": "Ardali Bazar outfall",
       "action": "sample",
       "bottle": 1
     },
     {
       "seq": 2,
-      "lat": 25.335,
-      "lon": 82.99,
+      "lat": 25.335851,
+      "lon": 82.991841,
       "label": "Shastri Ghat",
       "action": "measure",
       "bottle": null
     },
     {
       "seq": 3,
-      "lat": 25.33,
-      "lon": 83.005,
+      "lat": 25.335727,
+      "lon": 82.999484,
       "label": "Chaukaghat",
       "action": "sample",
       "bottle": 2
     },
     {
       "seq": 4,
-      "lat": 25.331,
-      "lon": 83.025,
+      "lat": 25.330679,
+      "lon": 83.034707,
       "label": "Nakkhi Ghat outfall",
       "action": "sample",
       "bottle": 3
     },
     {
       "seq": 5,
-      "lat": 25.327,
-      "lon": 83.045,
+      "lat": 25.329249,
+      "lon": 83.044651,
       "label": "Sarai Mohana",
       "action": "measure",
       "bottle": null

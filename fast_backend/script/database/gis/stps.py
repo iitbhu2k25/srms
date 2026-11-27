@@ -9,7 +9,7 @@ import sys
 import geopandas as gpd
 import pandas as pd
 from shapely.geometry import MultiLineString, MultiPolygon
-from shapely.ops import transform
+import shapely
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from db_connection import MEDIA_DIR, engine, table_has_rows  # noqa: E402
@@ -17,7 +17,7 @@ from db_connection import MEDIA_DIR, engine, table_has_rows  # noqa: E402
 
 def to_2d(geom):
     """Drop Z values (the river shapefile is 3-D)."""
-    return transform(lambda x, y, z=None: (x, y), geom)
+    return shapely.force_2d(geom)
 
 
 TABLE_NAME = 'stps'
@@ -32,9 +32,10 @@ def number(series, zero_is_missing=True):
 
 
 def drain_codes(text):
+    """PostgreSQL array literal, e.g. '{220,228}' (COPY into an integer[] column)."""
     if not isinstance(text, str) or not text.strip():
         return None
-    return sorted({int(c) for c in re.findall(r"\d+", text)})
+    return "{" + ",".join(str(c) for c in sorted({int(c) for c in re.findall(r"\d+", text)})) + "}"
 
 
 def status(text):

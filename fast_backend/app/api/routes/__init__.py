@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.routes import alerts, boat, dashboard, drone, groundwater, ingest, lab, stations, tem
+from app.api.routes import alerts, boat, dashboard, drone, gis, groundwater, ingest, lab, stations, tem
 
 app_router = APIRouter()
 
@@ -42,6 +42,11 @@ app_router.include_router(
     drone.router,
     prefix="/surveys",
     tags=["Drone & Boat Surveys"]
+)
+app_router.include_router(
+    gis.router,
+    prefix="/gis",
+    tags=["GIS Layers (basin, rivers, drains, STPs)"]
 )
 app_router.include_router(
     ingest.router,

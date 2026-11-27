@@ -1,4 +1,4 @@
-# IoT river monitoring network (SRMS component 2.2): stations, river centre-line and the parameter dictionary.
+# IoT river monitoring network (SRMS component 2.2): stations and the parameter dictionary.
 from datetime import date
 from typing import Optional
 
@@ -38,11 +38,3 @@ class Parameter(Base):
     max_limit: Mapped[Optional[float]] = mapped_column(Float)
     group_name: Mapped[str] = mapped_column(String, nullable=False)
     sort_order: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
-
-
-class RiverCenterlinePoint(Base):
-    __tablename__ = "river_centerline_points"
-
-    seq: Mapped[int] = mapped_column(Integer, unique=True, nullable=False)
-    lat: Mapped[float] = mapped_column(Float, nullable=False)
-    lon: Mapped[float] = mapped_column(Float, nullable=False)
